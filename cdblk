@@ -1,0 +1,19 @@
+#!/bin/sh
+# cdblk
+# Created Thu Apr 24 1997 by Kevin Davidson metalsamurai@me.com
+# $Id: cdblk,v 1.1 1997/04/24 12:09:47 tkld Exp $
+# $Log: cdblk,v $
+# Revision 1.1  1997/04/24  12:09:47  tkld
+# Initial revision
+#
+
+case "$1" in
+'start')
+    if [ -f /usr/sbin/setcdblk ] ; then
+	/usr/sbin/setcdblk -d /dev/rdsk/c0t6d0s2
+    fi
+    ;;
+'stop')
+    # nothing to do
+    ;;
+esac
